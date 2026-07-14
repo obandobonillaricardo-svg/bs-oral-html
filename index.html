@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>B&S Perfección Oral — Odontología estética en Bogotá</title>
+<meta name="description" content="Diseño de sonrisa, ortodoncia invisible, blanqueamiento y carillas en Bogotá. Agenda tu valoración con B&S Perfección Oral." />
+<meta name="keywords" content="odontología estética Bogotá, diseño de sonrisa, ortodoncia invisible, blanqueamiento dental, carillas dentales" />
+<meta property="og:title" content="B&S Perfección Oral — Odontología estética en Bogotá" />
+<meta property="og:description" content="Diseño de sonrisa, ortodoncia invisible, blanqueamiento y carillas. Agenda tu valoración." />
+<meta property="og:type" content="website" />
+<meta property="og:locale" content="es_CO" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --font-display: 'Fraunces', serif;
+    --font-sans: 'Manrope', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+
+    --color-ink: #16202B;
+    --color-steel: #5B6B7C;
+    --color-mist: #9FB0BE;
+    --color-cloud: #F5F7F8;
+    --color-paper: #FCFDFD;
+    --color-aqua: #14B8C6;
+    --color-cobalt: #2E6FE0;
+    --color-gold: #C7A249;
+    --smile-gradient: linear-gradient(90deg, #14B8C6 0%, #2E6FE0 100%);
+    --max-content: 1180px;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-display);
+    color: var(--color-ink);
+    font-weight: 500;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  img { max-width: 100%; display: block; }
+
+  :focus-visible {
+    outline: 2px solid var(--color-aqua);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* ---------- utilities ---------- */
+  .container-content {
+    margin: 0 auto;
+    width: 100%;
+    max-width: var(--max-content);
+    padding: 0 24px;
+  }
+  @media (min-width: 768px) { .container-content { padding: 0 40px; } }
+
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--color-steel);
+  }
+
+  .section-pad { padding: 80px 0; }
+  @media (min-width: 768px) { .section-pad { padding: 112px 0; } }
+
+  .smile-line {
+    display: block;
+    width: 72px;
+    height: 3px;
+    border-radius: 999px;
+    background: var(--smile-gradient);
+    transform-origin: left center;
+  }
+
+  .smile-line--animate {
+    animation: drawline 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+
+  @keyframes drawline {
+    0% { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+  }
+
+  @keyframes fadeUp {
+    0% { opacity: 0; transform: translateY(16px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 999px;
+    background: var(--color-ink);
+    padding: 14px 28px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-paper);
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  .btn-primary:hover, .btn-primary:focus-visible { background: var(--color-cobalt); }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 999px;
+    border: 1px solid rgba(22,32,43,0.15);
+    background: transparent;
+    padding: 14px 28px;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--color-ink);
+    cursor: pointer;
+    transition: border-color 0.2s ease, color 0.2s ease;
+  }
+  .btn-secondary:hover, .btn-secondary:focus-visible { border-color: var(--color-aqua); color: var(--color-cobalt); }
+
+  .card {
+    border-radius: 16px;
+    border: 1px solid rgba(22,32,43,0.08);
+    background: var(--color-paper);
+    box-shadow: 0 1px 2px rgba(22,32,43,0.04);
+  }
+
+  .reveal { opacity: 0; transform: translateY(16px); }
+  .reveal.is-visible { animation: fadeUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards; }
+
+  /* ---------- header ---------- */
+  header {
+    position: fixed;
+    inset-inline: 0;
+    top: 0;
+    z-index: 50;
+    transition: all 0.3s ease;
+    background: transparent;
+  }
+  header.scrolled {
+    background: rgba(252,253,253,0.9);
+    box-shadow: 0 1px 2px rgba(22,32,43,0.06);
+    backdrop-filter: blur(8px);
+  }
+  .header-inner {
+    display: flex;
+    height: 80px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo-link img { height: 48px; width: auto; }
+  @media (min-width: 768px) { .logo-link img { height: 56px; } }
+
+  nav.main-nav { display: none; align-items: center; gap: 32px; }
+  @media (min-width: 768px) { nav.main-nav { display: flex; } }
+  nav.main-nav a {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-steel);
+    transition: color 0.2s ease;
+  }
+  nav.main-nav a:hover { color: var(--color-ink); }
+
+  .header-cta { display: none; }
+  @media (min-width: 768px) { .header-cta { display: block; } }
+
+  .menu-toggle {
+    display: flex;
+    height: 40px;
+    width: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    border: 1px solid rgba(22,32,43,0.1);
+    background: transparent;
+    cursor: pointer;
+  }
+  @media (min-width: 768px) { .menu-toggle { display: none; } }
+  .menu-toggle .bar-wrap { position: relative; display: block; height: 16px; width: 20px; }
+  .menu-toggle .bar {
+    position: absolute;
+    left: 0;
+    height: 1.5px;
+    width: 100%;
+    background: var(--color-ink);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+  .menu-toggle .bar1 { top: 0; }
+  .menu-toggle .bar2 { top: 7px; }
+  .menu-toggle .bar3 { top: 14px; }
+  .menu-toggle.open .bar1 { transform: translateY(7px) rotate(45deg); }
+  .menu-toggle.open .bar2 { opacity: 0; }
+  .menu-toggle.open .bar3 { transform: translateY(-7px) rotate(-45deg); }
+
+  #mobile-menu {
+    display: none;
+    border-top: 1px solid rgba(22,32,43,0.08);
+    background: var(--color-paper);
+  }
+  @media (min-width: 768px) { #mobile-menu { display: none !important; } }
+  #mobile-menu.open { display: block; }
+  #mobile-menu nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 16px 0;
+  }
+  #mobile-menu nav a {
+    border-radius: 8px;
+    padding: 12px 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-steel);
+  }
+  #mobile-menu nav a:hover { background: var(--color-cloud); color: var(--color-ink); }
+  #mobile-menu .btn-primary { margin-top: 8px; }
+
+  /* ---------- hero ---------- */
+  #top {
+    position: relative;
+    overflow: hidden;
+    padding-top: 128px;
+  }
+  @media (min-width: 768px) { #top { padding-top: 160px; } }
+
+  .hero-grid {
+    display: grid;
+    gap: 64px;
+    align-items: center;
+    padding-bottom: 80px;
+  }
+  @media (min-width: 768px) {
+    .hero-grid { grid-template-columns: 1fr 1fr; padding-bottom: 112px; }
+  }
+
+  .hero-grid h1 {
+    margin-top: 20px;
+    font-size: 40px;
+    line-height: 1.08;
+    letter-spacing: -0.01em;
+  }
+  @media (min-width: 768px) { .hero-grid h1 { font-size: 60px; } }
+  .hero-grid h1 em { font-style: italic; color: var(--color-cobalt); }
+
+  .hero-grid p.lead {
+    margin-top: 24px;
+    max-width: 420px;
+    font-size: 18px;
+    color: var(--color-steel);
+  }
+
+  .hero-cta { margin-top: 36px; display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+
+  .hero-stats {
+    margin-top: 56px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    border-top: 1px solid rgba(22,32,43,0.08);
+    padding-top: 32px;
+  }
+  .hero-stats dt { }
+  .hero-stats dd { margin-top: 4px; font-family: var(--font-display); font-size: 24px; color: var(--color-ink); }
+
+  .hero-image-wrap { position: relative; }
+  .hero-image-wrap .img-rounded { position: relative; overflow: hidden; border-radius: 24px; }
+  .hero-image-wrap .img-rounded img { width: 100%; height: auto; object-fit: cover; }
+
+  .hero-badge {
+    position: absolute;
+    bottom: -24px;
+    left: -24px;
+    display: none;
+    align-items: center;
+    gap: 12px;
+    border-radius: 16px;
+    background: var(--color-paper);
+    padding: 16px 20px;
+    box-shadow: 0 12px 32px rgba(22,32,43,0.14);
+  }
+  @media (min-width: 640px) { .hero-badge { display: flex; } }
+  .hero-badge p:first-child { font-family: var(--font-display); font-size: 14px; line-height: 1; color: var(--color-ink); }
+  .hero-badge p:last-child { margin-top: 4px; font-size: 12px; color: var(--color-steel); }
+
+  /* ---------- services ---------- */
+  .services-grid {
+    margin-top: 56px;
+    display: grid;
+    gap: 24px;
+  }
+  @media (min-width: 640px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (min-width: 1024px) { .services-grid { grid-template-columns: repeat(3, 1fr); } }
+
+  .service-card {
+    height: 100%;
+    padding: 28px;
+    transition: box-shadow 0.2s ease;
+  }
+  .service-card:hover { box-shadow: 0 8px 28px rgba(22,32,43,0.08); }
+  .service-card .num { font-family: var(--font-mono); font-size: 12px; color: var(--color-mist); }
+  .service-card h3 { margin-top: 12px; font-size: 20px; }
+  .service-card p { margin-top: 10px; font-size: 14px; line-height: 1.6; color: var(--color-steel); }
+
+  /* ---------- about ---------- */
+  .bg-cloud { background: var(--color-cloud); }
+
+  .about-grid {
+    display: grid;
+    gap: 56px;
+    align-items: center;
+  }
+  @media (min-width: 768px) { .about-grid { grid-template-columns: 1fr 0.85fr; gap: 64px; } }
+
+  .about-grid h2 { margin-top: 16px; font-size: 30px; }
+  @media (min-width: 768px) { .about-grid h2 { font-size: 36px; } }
+
+  .about-grid p.big { margin-top: 24px; font-size: 18px; line-height: 1.7; color: var(--color-steel); }
+  .about-grid p.big strong { color: var(--color-ink); }
+  .about-grid p.reg { margin-top: 20px; line-height: 1.7; color: var(--color-steel); }
+
+  .about-facts {
+    margin-top: 36px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+  @media (min-width: 640px) { .about-facts { grid-template-columns: repeat(4, 1fr); } }
+  .about-facts p.value { margin-top: 4px; font-size: 14px; font-weight: 500; color: var(--color-ink); }
+
+  .about-diagram { display: none; }
+  @media (min-width: 768px) { .about-diagram { display: block; } }
+  .about-diagram svg { margin: 0 auto; width: 100%; max-width: 360px; }
+
+  .smile-diagram-path {
+    stroke-dasharray: 1;
+    stroke-dashoffset: 1;
+    animation: drawline2 1.4s 0.2s cubic-bezier(0.22,1,0.36,1) forwards;
+  }
+  @keyframes drawline2 {
+    to { stroke-dashoffset: 0; }
+  }
+
+  /* ---------- booking ---------- */
+  .booking-section { background: var(--color-ink); color: var(--color-paper); }
+  .booking-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  @media (min-width: 768px) { .booking-inner { flex-direction: row; align-items: center; justify-content: space-between; } }
+  .booking-inner h2 { color: var(--color-paper); margin-top: 16px; max-width: 480px; font-size: 30px; }
+  @media (min-width: 768px) { .booking-inner h2 { font-size: 36px; } }
+  .booking-inner p { margin-top: 16px; max-width: 400px; color: var(--color-mist); }
+  .booking-ctas { display: flex; flex-shrink: 0; flex-direction: column; gap: 12px; }
+  @media (min-width: 640px) { .booking-ctas { flex-direction: row; } }
+  .btn-primary.on-dark { background: var(--color-paper); color: var(--color-ink); }
+  .btn-primary.on-dark:hover { background: var(--color-cloud); }
+  .btn-secondary.on-dark { border-color: rgba(252,253,253,0.25); color: var(--color-paper); }
+  .btn-secondary.on-dark:hover { border-color: var(--color-aqua); color: var(--color-aqua); }
+
+  /* ---------- why us ---------- */
+  .whyus-grid {
+    margin-top: 56px;
+    display: grid;
+    gap: 40px;
+  }
+  @media (min-width: 640px) { .whyus-grid { grid-template-columns: repeat(2, 1fr); column-gap: 40px; } }
+  .whyus-item { display: flex; gap: 20px; }
+  .whyus-dot {
+    margin-top: 4px;
+    height: 10px;
+    width: 10px;
+    flex-shrink: 0;
+    border-radius: 999px;
+    background: var(--smile-gradient);
+  }
+  .whyus-item h3 { font-size: 18px; }
+  .whyus-item p { margin-top: 6px; font-size: 14px; line-height: 1.6; color: var(--color-steel); }
+
+  /* ---------- team ---------- */
+  .team-grid {
+    margin-top: 56px;
+    display: grid;
+    max-width: 640px;
+    gap: 32px;
+  }
+  @media (min-width: 640px) { .team-grid { grid-template-columns: repeat(2, 1fr); } }
+  .team-card { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; padding: 28px; }
+  .team-avatar {
+    position: relative;
+    height: 80px;
+    width: 80px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 999px;
+  }
+  .team-avatar img { height: 100%; width: 100%; object-fit: cover; }
+  .team-card h3 { font-size: 18px; }
+  .team-card p { margin-top: 4px; font-size: 14px; color: var(--color-steel); }
+
+  /* ---------- testimonials ---------- */
+  .testimonials-grid {
+    margin-top: 56px;
+    display: grid;
+    gap: 24px;
+  }
+  @media (min-width: 768px) { .testimonials-grid { grid-template-columns: repeat(3, 1fr); } }
+  .testimonial-card { height: 100%; padding: 28px; }
+  .testimonial-card blockquote {
+    font-family: var(--font-display);
+    font-size: 18px;
+    line-height: 1.4;
+    color: var(--color-ink);
+  }
+  .testimonial-card figcaption { margin-top: 20px; font-size: 14px; color: var(--color-steel); }
+
+  /* ---------- contact ---------- */
+  .contact-grid { display: grid; gap: 56px; }
+  @media (min-width: 768px) { .contact-grid { grid-template-columns: 0.9fr 1.1fr; gap: 64px; } }
+  .contact-grid h2 { margin-top: 16px; font-size: 30px; }
+  @media (min-width: 768px) { .contact-grid h2 { font-size: 36px; } }
+
+  .contact-list { margin-top: 36px; display: flex; flex-direction: column; gap: 24px; font-size: 14px; }
+  .contact-list dd { margin-top: 4px; color: var(--color-steel); }
+  .contact-list a { color: var(--color-cobalt); }
+  .contact-list a:hover { text-decoration: underline; }
+  .contact-list .hours p { margin: 0; }
+  .contact-list .hours span { color: var(--color-ink); }
+
+  form.contact-form { padding: 28px; position: relative; }
+  @media (min-width: 640px) { form.contact-form { padding: 32px; } }
+  .form-honeypot { position: absolute; left: -9999px; }
+  .form-grid { display: grid; gap: 20px; }
+  @media (min-width: 640px) { .form-grid { grid-template-columns: repeat(2, 1fr); } }
+  .form-field { margin-top: 20px; }
+  .form-grid .form-field { margin-top: 0; }
+  label { font-size: 14px; font-weight: 500; color: var(--color-ink); }
+  input, textarea {
+    margin-top: 6px;
+    width: 100%;
+    border-radius: 8px;
+    border: 1px solid rgba(22,32,43,0.12);
+    background: var(--color-paper);
+    padding: 12px 16px;
+    font-size: 14px;
+    font-family: var(--font-sans);
+    outline: none;
+    transition: border-color 0.2s ease;
+  }
+  input:focus, textarea:focus { border-color: var(--color-aqua); }
+  textarea { resize: none; }
+
+  .form-error { margin-top: 16px; font-size: 14px; color: #dc2626; }
+  .form-submit { margin-top: 24px; width: 100%; }
+  @media (min-width: 640px) { .form-submit { width: auto; } }
+  .form-submit:disabled { cursor: not-allowed; opacity: 0.6; }
+  .form-note { margin-top: 16px; font-size: 12px; color: var(--color-mist); }
+
+  .form-success { padding: 32px; text-align: center; }
+  .form-success p.title { font-family: var(--font-display); font-size: 20px; color: var(--color-ink); }
+  .form-success p.desc { margin-top: 8px; font-size: 14px; color: var(--color-steel); }
+  .form-success .btn-secondary { margin-top: 24px; }
+
+  /* ---------- footer ---------- */
+  footer { border-top: 1px solid rgba(22,32,43,0.08); background: var(--color-paper); }
+  .footer-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 56px 0;
+  }
+  @media (min-width: 768px) { .footer-inner { flex-direction: row; align-items: flex-start; justify-content: space-between; } }
+  .footer-brand { font-family: var(--font-display); font-size: 18px; color: var(--color-ink); }
+  .footer-brand span { color: var(--color-cobalt); }
+  .footer-tag { margin-top: 12px; max-width: 300px; font-size: 14px; color: var(--color-steel); }
+  .footer-cols { display: flex; gap: 40px; }
+  .footer-col a { display: block; margin-top: 12px; font-size: 14px; color: var(--color-steel); }
+  .footer-col a:first-of-type { margin-top: 12px; }
+  .footer-col a:hover { color: var(--color-cobalt); }
+  .footer-bottom { border-top: 1px solid rgba(22,32,43,0.08); padding: 24px 0; }
+  .footer-bottom p { font-size: 12px; color: var(--color-mist); }
+</style>
+</head>
+<body>
+
+<header id="site-header">
+  <div class="container-content header-inner">
+    <a href="#top" class="logo-link" aria-label="B&S Perfección Oral, inicio">
+      <img src="images/logo.png" alt="B&S Perfección Oral" />
+    </a>
+
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#testimonios">Pacientes</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <div class="header-cta">
+      <a href="https://wa.me/573001234567" target="_blank" rel="noopener noreferrer" class="btn-primary">
+        Agendar valoración
+      </a>
+    </div>
+
+    <button type="button" id="menu-toggle" class="menu-toggle" aria-expanded="false" aria-controls="mobile-menu" aria-label="Abrir menú">
+      <span class="bar-wrap">
+        <span class="bar bar1"></span>
+        <span class="bar bar2"></span>
+        <span class="bar bar3"></span>
+      </span>
+    </button>
+  </div>
+
+  <div id="mobile-menu">
+    <nav class="container-content" aria-label="Navegación móvil">
+      <a href="#servicios">Servicios</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#testimonios">Pacientes</a>
+      <a href="#contacto">Contacto</a>
+      <a href="https://wa.me/573001234567" target="_blank" rel="noopener noreferrer" class="btn-primary">
+        Agendar valoración
+      </a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- HERO -->
+  <section id="top">
+    <div class="container-content hero-grid">
+      <div>
+        <span class="eyebrow">Odontología estética · Bogotá</span>
+        <h1>
+          Cada sonrisa tiene una curva.<br />
+          Nosotros la <em>encontramos</em>.
+        </h1>
+        <span class="smile-line smile-line--animate" style="margin-top:24px;" aria-hidden="true"></span>
+        <p class="lead">
+          Diseño de sonrisa, ortodoncia invisible, blanqueamiento y carillas,
+          planeados con precisión y acompañados de cerca, desde la primera
+          valoración hasta el último control.
+        </p>
+        <div class="hero-cta">
+          <a href="https://wa.me/573001234567" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            Agendar valoración gratuita
+          </a>
+          <a href="#servicios" class="btn-secondary">Ver servicios</a>
+        </div>
+        <dl class="hero-stats">
+          <div>
+            <dt class="eyebrow">Experiencia</dt>
+            <dd>12+ años</dd>
+          </div>
+          <div>
+            <dt class="eyebrow">Sonrisas diseñadas</dt>
+            <dd>1.400+</dd>
+          </div>
+          <div>
+            <dt class="eyebrow">Satisfacción</dt>
+            <dd>98%</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="hero-image-wrap">
+        <div class="img-rounded">
+          <img src="images/clinica-tratamiento.webp" alt="Procedimiento odontológico en curso en el consultorio de B&S Perfección Oral" />
+        </div>
+
+        <div class="hero-badge">
+          <svg width="44" height="30" viewBox="0 0 44 30" aria-hidden="true">
+            <path d="M4 8 Q22 26 40 8" fill="none" stroke="url(#smileGradMini)" stroke-width="4" stroke-linecap="round" />
+            <defs>
+              <linearGradient id="smileGradMini" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#14B8C6" />
+                <stop offset="100%" stop-color="#2E6FE0" />
+              </linearGradient>
+            </defs>
+          </svg>
+          <div>
+            <p>Diseño de sonrisa</p>
+            <p>planeado antes de empezar</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="servicios" class="section-pad">
+    <div class="container-content">
+      <div class="reveal">
+        <span class="eyebrow">Qué hacemos</span>
+        <h2 style="margin-top:16px; max-width:560px; font-size:30px;">Un tratamiento para cada etapa de tu sonrisa.</h2>
+        <span class="smile-line" style="margin-top:24px;" aria-hidden="true"></span>
+      </div>
+
+      <div class="services-grid">
+        <article class="card service-card reveal">
+          <span class="num">01</span>
+          <h3>Diseño de sonrisa</h3>
+          <p>Planeación digital de la forma, tamaño y color de tus dientes antes de iniciar el tratamiento, con simulación previa.</p>
+        </article>
+        <article class="card service-card reveal">
+          <span class="num">02</span>
+          <h3>Ortodoncia invisible</h3>
+          <p>Alineadores transparentes removibles para corregir la posición dental sin brackets metálicos a la vista.</p>
+        </article>
+        <article class="card service-card reveal">
+          <span class="num">03</span>
+          <h3>Carillas y coronas estéticas</h3>
+          <p>Restauraciones ultrafinas en porcelana o resina que corrigen forma, color y pequeñas fracturas dentales.</p>
+        </article>
+        <article class="card service-card reveal">
+          <span class="num">04</span>
+          <h3>Blanqueamiento profesional</h3>
+          <p>Aclaramiento dental supervisado, en consultorio o con kit para casa, con protocolo de sensibilidad controlada.</p>
+        </article>
+        <article class="card service-card reveal">
+          <span class="num">05</span>
+          <h3>Rehabilitación oral</h3>
+          <p>Recuperación de piezas dentales perdidas o muy desgastadas mediante prótesis, implantes o coronas.</p>
+        </article>
+        <article class="card service-card reveal">
+          <span class="num">06</span>
+          <h3>Odontología general</h3>
+          <p>Limpieza, resinas, endodoncia y control periódico, para mantener la base de salud detrás de cada sonrisa.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="nosotros" class="section-pad bg-cloud">
+    <div class="container-content about-grid">
+      <div>
+        <div class="reveal">
+          <span class="eyebrow">Nuestro enfoque</span>
+          <h2>La estética empieza en el diagnóstico, no en el consultorio.</h2>
+          <span class="smile-line" style="margin-top:24px;" aria-hidden="true"></span>
+        </div>
+
+        <div class="reveal">
+          <p class="big">
+            En <strong>B&amp;S Perfección Oral</strong> creemos que una sonrisa bien
+            diseñada respeta la proporción de tu rostro, la función de tu
+            mordida y tu forma natural de hablar y reír. Por eso cada
+            tratamiento parte de un análisis fotográfico y digital antes de
+            tocar una sola pieza dental.
+          </p>
+          <p class="reg">
+            Nuestro equipo combina odontología general, ortodoncia y
+            rehabilitación estética bajo un mismo plan de tratamiento, para
+            que no tengas que coordinar entre varios especialistas: nosotros
+            lo hacemos por ti.
+          </p>
+
+          <div class="about-facts">
+            <div>
+              <p class="eyebrow">Valoración digital</p>
+              <p class="value">Fotografía + escaneo</p>
+            </div>
+            <div>
+              <p class="eyebrow">Planes</p>
+              <p class="value">100% personalizados</p>
+            </div>
+            <div>
+              <p class="eyebrow">Bioseguridad</p>
+              <p class="value">Protocolo certificado</p>
+            </div>
+            <div>
+              <p class="eyebrow">Seguimiento</p>
+              <p class="value">Controles incluidos</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-diagram reveal">
+        <svg viewBox="0 0 480 420" role="img" aria-label="Diagrama de diseño de sonrisa con arco de referencia y puntos de medida">
+          <defs>
+            <linearGradient id="smileGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#14B8C6" />
+              <stop offset="100%" stop-color="#2E6FE0" />
+            </linearGradient>
+          </defs>
+          <circle cx="240" cy="200" r="176" fill="#FCFDFD" />
+          <g stroke="#9FB0BE" stroke-opacity="0.35" stroke-width="1">
+            <line x1="80" y1="120" x2="400" y2="120" />
+            <line x1="80" y1="200" x2="400" y2="200" />
+            <line x1="80" y1="280" x2="400" y2="280" />
+            <line x1="160" y1="60" x2="160" y2="340" />
+            <line x1="240" y1="60" x2="240" y2="340" />
+            <line x1="320" y1="60" x2="320" y2="340" />
+          </g>
+          <path class="smile-diagram-path" d="M 96 190 Q 240 300 384 190" fill="none" stroke="url(#smileGrad)" stroke-width="5" stroke-linecap="round" pathLength="1" />
+          <g fill="#F5F7F8" stroke="#16202B" stroke-opacity="0.5" stroke-width="1.5">
+            <rect x="200" y="150" width="24" height="46" rx="6" />
+            <rect x="226" y="146" width="26" height="52" rx="6" />
+            <rect x="254" y="146" width="26" height="52" rx="6" />
+            <rect x="282" y="150" width="24" height="46" rx="6" />
+          </g>
+          <circle cx="96" cy="190" r="5" fill="#C7A249" />
+          <circle cx="240" cy="300" r="5" fill="#C7A249" />
+          <circle cx="384" cy="190" r="5" fill="#C7A249" />
+          <text x="240" y="380" text-anchor="middle" fill="#5B6B7C" font-size="12" font-family="'IBM Plex Mono', monospace">LÍNEA DE SONRISA — REF. 1:1</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING -->
+  <section class="section-pad booking-section">
+    <div class="container-content booking-inner">
+      <div class="reveal">
+        <span class="eyebrow" style="color:var(--color-mist);">Primera cita</span>
+        <h2>La valoración inicial es gratuita y sin compromiso.</h2>
+        <p>
+          Cuéntanos qué te gustaría cambiar de tu sonrisa. Te respondemos
+          por WhatsApp el mismo día hábil con horarios disponibles.
+        </p>
+      </div>
+
+      <div class="booking-ctas reveal">
+        <a href="https://wa.me/573001234567" target="_blank" rel="noopener noreferrer" class="btn-primary on-dark">
+          Escribir por WhatsApp
+        </a>
+        <a href="tel:+573001234567" class="btn-secondary on-dark">
+          Llamar +57 300 123 4567
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section class="section-pad bg-cloud">
+    <div class="container-content">
+      <div class="reveal">
+        <span class="eyebrow">Por qué B&amp;S</span>
+        <h2 style="margin-top:16px; max-width:560px; font-size:30px;">Lo que cambia cuando el plan es uno solo.</h2>
+        <span class="smile-line" style="margin-top:24px;" aria-hidden="true"></span>
+      </div>
+
+      <div class="whyus-grid">
+        <div class="whyus-item reveal">
+          <span class="whyus-dot" aria-hidden="true"></span>
+          <div>
+            <h3>Un solo plan, todo el equipo</h3>
+            <p>Ortodoncia, estética y rehabilitación coordinadas entre sí, no tratamientos aislados que se contradicen.</p>
+          </div>
+        </div>
+        <div class="whyus-item reveal">
+          <span class="whyus-dot" aria-hidden="true"></span>
+          <div>
+            <h3>Simulación antes de empezar</h3>
+            <p>Ves una proyección de tu resultado antes de tomar la decisión de iniciar el tratamiento.</p>
+          </div>
+        </div>
+        <div class="whyus-item reveal">
+          <span class="whyus-dot" aria-hidden="true"></span>
+          <div>
+            <h3>Planes de pago claros</h3>
+            <p>Cotización detallada por escrito desde la primera cita, sin costos ocultos en el camino.</p>
+          </div>
+        </div>
+        <div class="whyus-item reveal">
+          <span class="whyus-dot" aria-hidden="true"></span>
+          <div>
+            <h3>Bioseguridad verificable</h3>
+            <p>Instrumental esterilizado por paciente y protocolos documentados según norma vigente.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="equipo" class="section-pad">
+    <div class="container-content">
+      <div class="reveal">
+        <span class="eyebrow">Quién te atiende</span>
+        <h2 style="margin-top:16px; max-width:560px; font-size:30px;">Un equipo pequeño, presente en cada control.</h2>
+        <span class="smile-line" style="margin-top:24px;" aria-hidden="true"></span>
+      </div>
+
+      <div class="team-grid">
+        <div class="card team-card reveal">
+          <div class="team-avatar"><img src="images/equipo/andres.webp" alt="Dr. Andrés Barragán S." /></div>
+          <div>
+            <h3>Dr. Andrés Barragán S.</h3>
+            <p>Odontólogo · Fundador</p>
+          </div>
+        </div>
+        <div class="card team-card reveal">
+          <div class="team-avatar"><img src="images/equipo/vanessa.webp" alt="Vanessa M." /></div>
+          <div>
+            <h3>Vanessa M.</h3>
+            <p>Odontóloga</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section id="testimonios" class="section-pad bg-cloud">
+    <div class="container-content">
+      <div class="reveal">
+        <span class="eyebrow">Pacientes</span>
+        <h2 style="margin-top:16px; max-width:560px; font-size:30px;">Lo que dicen quienes ya pasaron por el proceso.</h2>
+        <span class="smile-line" style="margin-top:24px;" aria-hidden="true"></span>
+      </div>
+
+      <div class="testimonials-grid">
+        <figure class="card testimonial-card reveal">
+          <blockquote>&ldquo;Antes de empezar ya sabía cómo se iba a ver mi sonrisa. Eso me dio la confianza para decidirme.&rdquo;</blockquote>
+          <figcaption>Paciente de diseño de sonrisa</figcaption>
+        </figure>
+        <figure class="card testimonial-card reveal">
+          <blockquote>&ldquo;Los alineadores no interrumpieron mi trabajo ni una sola semana. El seguimiento fue puntual todo el tiempo.&rdquo;</blockquote>
+          <figcaption>Paciente de ortodoncia invisible</figcaption>
+        </figure>
+        <figure class="card testimonial-card reveal">
+          <blockquote>&ldquo;Me explicaron cada paso y el costo total desde el primer día, sin sorpresas en la factura.&rdquo;</blockquote>
+          <figcaption>Paciente de rehabilitación oral</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contacto" class="section-pad">
+    <div class="container-content contact-grid">
+      <div class="reveal">
+        <span class="eyebrow">Contacto</span>
+        <h2>Hablemos de tu sonrisa.</h2>
+        <span class="smile-line" style="margin-top:24px;" aria-hidden="true"></span>
+
+        <dl class="contact-list">
+          <div>
+            <dt class="eyebrow">Dirección</dt>
+            <dd>Calle 100 # 15-20, Bogotá, Colombia</dd>
+          </div>
+          <div>
+            <dt class="eyebrow">Correo</dt>
+            <dd><a href="mailto:hola@bsperfeccionoral.com">hola@bsperfeccionoral.com</a></dd>
+          </div>
+          <div>
+            <dt class="eyebrow">Teléfono / WhatsApp</dt>
+            <dd><a href="tel:+573001234567">+57 300 123 4567</a></dd>
+          </div>
+          <div>
+            <dt class="eyebrow">Horario de atención</dt>
+            <dd class="hours">
+              <p><span>Lunes a viernes:</span> 8:00 a.m. – 6:00 p.m.</p>
+              <p><span>Sábados:</span> 9:00 a.m. – 1:00 p.m.</p>
+            </dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="reveal" style="position:relative;">
+        <form class="card contact-form" id="contact-form" novalidate>
+          <div class="form-honeypot" aria-hidden="true">
+            <label for="website">No completar este campo</label>
+            <input type="text" id="website" name="website" tabindex="-1" autocomplete="off" />
+          </div>
+
+          <div class="form-grid">
+            <div class="form-field">
+              <label for="name">Nombre</label>
+              <input id="name" name="name" type="text" required maxlength="120" autocomplete="name" placeholder="Tu nombre completo" />
+            </div>
+            <div class="form-field">
+              <label for="phone">Teléfono / WhatsApp</label>
+              <input id="phone" name="phone" type="tel" required maxlength="30" autocomplete="tel" placeholder="300 123 4567" />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Correo</label>
+            <input id="email" name="email" type="email" required maxlength="160" autocomplete="email" placeholder="tu@correo.com" />
+          </div>
+
+          <div class="form-field">
+            <label for="message">Cuéntanos qué te gustaría mejorar de tu sonrisa</label>
+            <textarea id="message" name="message" required rows="4" maxlength="800" placeholder="Por ejemplo: quiero saber sobre ortodoncia invisible"></textarea>
+          </div>
+
+          <p class="form-error" id="form-error" role="alert" style="display:none;"></p>
+
+          <button type="submit" class="btn-primary form-submit" id="form-submit">Enviar mensaje</button>
+
+          <p class="form-note">
+            Al enviar este formulario aceptas que te contactemos para responder tu
+            solicitud. No compartimos tus datos con terceros.
+          </p>
+        </form>
+
+        <div class="card form-success" id="form-success" style="display:none;" role="status">
+          <p class="title">¡Mensaje enviado!</p>
+          <p class="desc">Te responderemos por correo o WhatsApp en el siguiente día hábil.</p>
+          <button type="button" class="btn-secondary" id="form-reset">Enviar otro mensaje</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container-content footer-inner">
+    <div>
+      <span class="footer-brand">B&amp;S <span>Perfección Oral</span></span>
+      <p class="footer-tag">Odontología estética y diseño de sonrisa en Bogotá, Colombia.</p>
+    </div>
+
+    <div class="footer-cols">
+      <div class="footer-col">
+        <p class="eyebrow">Síguenos</p>
+        <a href="https://facebook.com/bsperfeccionoral" target="_blank" rel="noopener noreferrer">Facebook</a>
+        <a href="https://instagram.com/bsperfeccionoral" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://wa.me/573001234567" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+      </div>
+
+      <div class="footer-col">
+        <p class="eyebrow">Contacto directo</p>
+        <a href="tel:+573001234567">+57 300 123 4567</a>
+        <a href="#contacto">Formulario de contacto</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p class="container-content" id="footer-year">© 2026 B&amp;S Perfección Oral. Todos los derechos reservados.</p>
+  </div>
+</footer>
+
+<script>
+  // Año dinámico en el footer
+  document.getElementById('footer-year').innerHTML =
+    '© ' + new Date().getFullYear() + ' B&amp;S Perfección Oral. Todos los derechos reservados.';
+
+  // Header: sombra y fondo al hacer scroll
+  const header = document.getElementById('site-header');
+  function onScroll() {
+    if (window.scrollY > 12) header.classList.add('scrolled');
+    else header.classList.remove('scrolled');
+  }
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  // Menú móvil
+  const menuToggle = document.getElementById('menu-toggle');
+  const mobileMenu = document.getElementById('mobile-menu');
+  menuToggle.addEventListener('click', () => {
+    const isOpen = mobileMenu.classList.toggle('open');
+    menuToggle.classList.toggle('open', isOpen);
+    menuToggle.setAttribute('aria-expanded', String(isOpen));
+    menuToggle.setAttribute('aria-label', isOpen ? 'Cerrar menú' : 'Abrir menú');
+  });
+  mobileMenu.querySelectorAll('a').forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileMenu.classList.remove('open');
+      menuToggle.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      menuToggle.setAttribute('aria-label', 'Abrir menú');
+    });
+  });
+
+  // Animación al hacer scroll (reveal)
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const revealEls = document.querySelectorAll('.reveal');
+  if (reduceMotion) {
+    revealEls.forEach((el) => el.classList.add('is-visible'));
+  } else {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, i) => {
+          if (entry.isIntersecting) {
+            const delay = Array.from(entry.target.parentElement.children).indexOf(entry.target) * 60;
+            setTimeout(() => entry.target.classList.add('is-visible'), delay);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -60px 0px' }
+    );
+    revealEls.forEach((el) => observer.observe(el));
+  }
+
+  // Formulario de contacto (simulado, sin backend)
+  const form = document.getElementById('contact-form');
+  const formError = document.getElementById('form-error');
+  const formSubmit = document.getElementById('form-submit');
+  const formSuccess = document.getElementById('form-success');
+  const formReset = document.getElementById('form-reset');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    formError.style.display = 'none';
+
+    const data = new FormData(form);
+    // Honeypot anti-bot
+    if (data.get('website')) {
+      showSuccess();
+      return;
+    }
+
+    formSubmit.disabled = true;
+    formSubmit.textContent = 'Enviando…';
+
+    // NOTA: este formulario es estático (sin backend). Para conectarlo a un
+    // servidor real, reemplaza este bloque con tu propia llamada fetch()
+    // a tu endpoint de contacto.
+    setTimeout(() => {
+      formSubmit.disabled = false;
+      formSubmit.textContent = 'Enviar mensaje';
+      showSuccess();
+      form.reset();
+    }, 700);
+  });
+
+  function showSuccess() {
+    form.style.display = 'none';
+    formSuccess.style.display = 'block';
+  }
+
+  formReset.addEventListener('click', () => {
+    formSuccess.style.display = 'none';
+    form.style.display = 'block';
+  });
+</script>
+
+</body>
+</html>
